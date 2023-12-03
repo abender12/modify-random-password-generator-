@@ -1,4 +1,6 @@
 // Assignment code here
+
+// Global variables
 var inputs = [""];
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
