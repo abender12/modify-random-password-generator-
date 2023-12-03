@@ -21,14 +21,14 @@ function generatePassword() {
     }
 
   var lowercaseAsk = confirm("Do you want lowercase letters in your password?");
-    if (lowercase === true) {
+    if (lowercaseAsk === true) {
       for (var i = 0; i < lowercase.length; i++) {
         inputs.push(lowercase[i]);
       }
     }
 
   var uppercaseAsk = confirm("Do you want uppercase letters in your password?");
-    if (uppercase === true) {
+    if (uppercaseAsk === true) {
       for (var i = 0; i < uppercase.length; i++) {
         inputs.push(uppercase[i]);
       }
@@ -42,17 +42,17 @@ function generatePassword() {
     }
 
   var specialChar = confirm("Do you want special characters in your password?");
-  if (specialChar === true) {
-    for (var i = 0; i < specials.length; i++) {
-      inputs.push(specials[i]);
+    if (specialChar === true) {
+      for (var i = 0; i < specials.length; i++) {
+        inputs.push(specials[i]);
+      }
     }
-  }
 
 // Make sure that the password is in the correct range of characters and that at least one of the character type is selected.
-if (uppercaseAsk === false && numeric === false && lowercaseAsk === false && specialsChar === false) {
-  alert("You must chose at least 1 type of character.");
-  return;
-}
+    if (uppercaseAsk === false && numeric === false && lowercaseAsk === false && specialChar === false) {
+      alert("You must chose at least 1 type of character.");
+      return;
+    }
 
 // Generate password based on criteria.
 var randPassword = "";
